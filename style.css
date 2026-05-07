@@ -1,0 +1,313 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: url(image/nzuri\ 3.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  
+}
+
+nav {
+  background: rgba(0,0,0,0.8);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin: 0 20px;
+}
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none; 
+   display: inline-block;
+  background: #005582;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+nav ul li a:hover {
+  color: #ffdd57;
+   text-decoration: none; 
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  
+}
+
+/* Head Titles */
+#home h1,
+#home h2,
+#skills h2,
+#projects h2,
+#education h2,
+#location h2 {
+  color: #ffdd57;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+#home {
+  text-align: center;
+}
+#home img {
+  border-radius: 5%;
+  margin: 20px 0;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.btn, form button {
+  display: inline-block;
+  background: #005582;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover, form button:hover {
+  background: #e64a19;
+  
+}
+
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+#skills li {
+  background: #005582;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+#skills li:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.project {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+  color:#ffdd57;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+}
+form input, form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.9);
+  color: #333;
+}
+form textarea {
+  min-height: 120px;
+}
+form button {
+  background: #005582;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background: #ffdd57;
+}
+
+/* Contact Info */
+.contact-info {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #fff;
+}
+.contact-info p {
+  margin: 8px 0;
+}
+.contact-info a {
+  color: #ffdd57;
+  font-weight: bold;
+  text-decoration: none;   /* Hakuna mistari ya chini */
+}
+
+.contact-info a:hover {
+  color: #ff5722;
+  text-decoration: none;   /* Hakuna mistari ya chini hata uki-hover */
+}
+
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+.social i {
+  font-size: 18px;
+}
+
+/* Platform Colors */
+.social.whatsapp { background: #005582; }
+.social.whatsapp:hover { background: #1ebe5d; }
+
+.social.instagram { background: #005582; }
+.social.instagram:hover { background: #c72a5d; }
+
+.social.github { background: #005582; }
+.social.github:hover { background: #000; }
+
+.social.linkedin {background: #005582;}
+.social.linkedin:hover { background: #005582; }
+
+
+
+/* Smooth transitions for all interactive elements */
+button, .btn, nav ul li a, #skills li, .project {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  section {
+    padding: 40px 15px;
+  }
+}
+
+footer{
+  text-align: center;
+  color: #ffdd57;
+}
+
+
+#skills{
+text-align: center;
+ color: #ffdd57;
+}
+
+
+
+
+/*education*/
+#education {
+  text-align: center;
+}
+#education h2 {
+  color: #ffdd57;
+  margin-bottom: 20px;
+}
+#education ul {
+  list-style: none;
+  padding: 0;
+}
+#education li {
+  background: rgba(0, 123, 255, 0.85);
+  color: #fff;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+#education li:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+
+
+/*language*/
+
+.languages {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.languages li {
+  background: rgba(0, 123, 255, 0.85);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.languages li:hover {
+  background: #0056b3;
+  transform: scale(1.08);
+}

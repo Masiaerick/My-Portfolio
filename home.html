@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASIAERICK Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#location">Location</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Hello, I’m  MASIAERICK L. MHAFIWA </h1>
+    <img src="image/picha.jpeg" alt="My Photo" width="200">
+    <h2>I am <span id="typing"></span></h2>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+  <h2> My Skills</h2>
+  <ul>
+    <li>PHP & MySQL</li>
+    <li>HTML, CSS, JavaScript</li>
+    <li>Python</li>
+    <li>Networking & Cybersecurity Enthusiast</li>
+    <li>Graphic Design (Photoshop, Illustrator, Figma)</li>
+    <li>Databases (MySQL, PostgreSQL, MongoDB, Oracle)</li>
+    <li>Languages: Java, C, C++, C#, KOTLIN ,SQL</li>
+    <li>Cloud Computing (Azure, AWS, Google Cloud)</li>
+    <li>UI/UX Design</li>
+    <li>Data Analysis & Visualization (MS Excel,MS Word, Power BI, Tableau)</li>
+    <li>Full Stack Web Developer & Database Designer</li>
+    <li>Mobile Developer &  IT Consultant</li>
+  </ul>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2> Projects</h2>
+    <div class="project">
+      <h3>Royal Travel Booking System</h3>
+      <p>A booking system with an admin dashboard and automated provider registration.</p>
+      <a href="https://github.com/Masiaerick/The-royal-travel" class="btn">View on GitHub</a>
+    </div>
+    <div class="project">
+      <h3>Voting System UI/UX</h3>
+      <p>A voting interface designed for Tanzanian users, featuring party logos and candidate details.</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+  <h2>Education & Certifications</h2>
+  <p><strong>BSc in Information Technology</strong> - Institute of Finance Management</p>
+  <ul>
+    <li>Cisco Networking Certificate</li>
+    <li>Microsoft Azure Fundamentals</li>
+    <li>Google Cloud Practitioner</li>
+    <li>CompTIA Security+</li>
+  </ul>
+  <h3>Workshops & Short Courses</h3>
+  <ul>
+    <li>Web Development Bootcamp</li>
+    <li>Cybersecurity Awareness Training</li>
+    <li>Data Analysis with Power BI</li>
+  </ul>
+  <h3>Languages</h3>
+  <ul>
+    <li>Programming: Python, Java , JavaScript , html/css , PHP, C, C++, C#, PostgreSQL , SQL, MongoDB</li>
+    
+  </ul>
+
+  <h3>Languages</h3>
+<ul class="languages">
+  <li>English</li>
+  <li>Swahili</li>
+  <li>French</li>
+</ul>
+
+</section>
+
+
+  <!-- Contact Section -->
+ <section id="contact">
+  <h2> Contact Me</h2>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Write your message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <div class="contact-info">
+    <p><strong>Phone:</strong> <a href="tel:0710903148">0710 903 148</a></p>
+    <p><strong>Email:</strong> <a href="mailto:masiaerickmhafiwa226@gmail.com">masiaerickmhafiwa226@gmail.com</a></p>
+  </div>
+
+  <div class="social-links">
+    <a href="https://wa.me/255710903148" class="social whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://www.instagram.com/mhafiwa_masiaerick" class="social instagram" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://github.com/Masiaerick" class="social github" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/samwel-peter-mayandika?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social linkedin" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+  </div>
+</section>
+
+
+  <!-- Location Section -->
+  <section id="location">
+    <h2> My Location</h2>
+    <p>Dar es Salaam, Kigamboni</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?...YOUR_MAP_CODE..."
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <footer>
+  <p>&copy; 2026 MASIAERICK L. MHAFIWA — All Rights Reserved.</p>
+
+  </footer>
+
+  <!-- Typing Effect Script -->
+  <script>
+    const roles = [
+      {text: "a Full Stack Web Developer", color: "red"},
+      {text: "a Mobile Developer", color: "cyan"},
+      {text: "a Data Analyst", color: "olive"},
+      {text: "an IT Consultant", color: "gold"},
+      {text: "a Cybersecurity Enthusiast", color: "orange"},
+      {text: "a Cloud Solutions Architect", color: "teal"},
+      {text: "a Software Engineer", color: "yellow"},
+      {text: "a Database Designer", color: "magenta"}
+    ];
+
+    let i = 0, j = 0, currentRole = "", isDeleting = false;
+    const typingElement = document.getElementById("typing");
+
+    function typeEffect() {
+      typingElement.style.color = roles[i].color;
+      if (!isDeleting && j <= roles[i].text.length) {
+        currentRole = roles[i].text.substring(0, j++);
+        typingElement.textContent = currentRole;
+      } else if (isDeleting && j >= 0) {
+        currentRole = roles[i].text.substring(0, j--);
+        typingElement.textContent = currentRole;
+      }
+
+      if (j === roles[i].text.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1200);
+        return;
+      } else if (j === 0 && isDeleting) {
+        isDeleting = false;
+        i = (i + 1) % roles.length;
+      }
+      setTimeout(typeEffect, isDeleting ? 60 : 100);
+    }
+    typeEffect();
+  </script>
+</body>
+</html>
